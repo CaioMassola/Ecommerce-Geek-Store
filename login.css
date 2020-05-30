@@ -1,0 +1,21 @@
+body {
+    background-color: gainsboro
+}
+
+.panel {
+    margin-top: 50px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#sair {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 991px) {
+    .btn_save {
+        min-width: 100vw;
+    }
+}
