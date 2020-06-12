@@ -64,7 +64,7 @@ session_start();
                 <a class="nav-link" href="index.php?modulo=Projeto&acao=blusas">Blusas</a>
             </li>
             <li class="nav-item">
-                <a id="activeItem" class="nav-link" href="index.php?modulo=Projeto&acao=acessorios">Acessórios</a>
+                <a class="nav-link" href="index.php?modulo=Projeto&acao=acessorios">Acessórios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?modulo=Projeto&acao=canecas">Canecas</a>
