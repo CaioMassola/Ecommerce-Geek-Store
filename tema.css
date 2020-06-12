@@ -1,0 +1,183 @@
+a:link {
+    text-decoration: none;
+}
+
+header div,
+header nav,
+#searchbar {
+    min-width: max-content;
+}
+
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#storeNameContainer {
+    height: 150px;
+}
+
+#storeNameContainer #logo {
+    width: 120px;
+    height: 120px;
+}
+
+#storeName {
+    font-size: 4.5rem;
+}
+
+#search {
+    width: 43.5vw;
+    max-width: 227px;
+    min-width: 72px;
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.btn-link,
+#storeName {
+    color: #333333;
+}
+
+.btn-link:hover {
+    color: #7c7c7d;
+}
+
+@media screen and (max-width: 930px) {
+    #onlyProduct {
+        width: 100vw !important;
+    }
+}
+
+@media screen and (max-width: 866px) {
+    header {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        padding-top: 15px;
+    }
+    #storeNameContainer #logo {
+        width: 60px;
+        height: 60px;
+    }
+    #storeNameContainer {
+        height: 45px;
+    }
+    #storeName {
+        font-size: 3.5rem;
+    }
+    .nav-link {
+        padding: 0 !important;
+    }
+    .navbar-nav {
+        margin: 0;
+    }
+    .navbar {
+        min-height: 40px;
+    }
+    #searchbarContainer {
+        height: 40px !important;
+    }
+    #productDetails h5 {
+        font-size: smaller;
+    }
+    #buttonsContainer button {
+        font-size: 16px !important;
+    }
+}
+
+#activeItem {
+    color: #333333;
+}
+
+#onlyProduct {
+    width: 95vw;
+    height: 55vh;
+}
+
+#buttonsContainer {
+    width: 95vw;
+    height: 15vh;
+}
+
+#productDetails {
+    max-width: 500px;
+}
+
+#productDetails h5 {
+    color: #999a9a;
+    font-weight: 300;
+}
+
+#productDetails h4 {
+    border-bottom: 1px solid #999a9a
+}
+
+#productDetails #basicDetails {
+    color: #333333;
+    line-height: 2.5;
+}
+
+#onlyProduct #logo {
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 50px;
+}
+
+#product #logo {
+    width: 230px;
+    height: 230px;
+}
+
+#product {
+    border: 3px solid white;
+    border-radius: 3px;
+}
+
+#product p {
+    text-align: center;
+    color: #333333;
+}
+
+#product:hover {
+    border: 3px solid #7c7c7d;
+    border-radius: 3px;
+}
+
+#product #name {
+    padding-top: 25px;
+    font-size: medium;
+}
+
+#product #price {
+    font-size: 2rem;
+}
+
+.panel {
+    margin-top: 15%
+}
+
+.tableCarrinho {
+    width: 600px !important;
+}
+
+.tableResumo {
+    width: 300px;
+    margin-top: 70px;
+}
+
+#buttonsContainer button {
+    font-size: large;
+}

@@ -1,9 +1,8 @@
 
  <?php
 session_start();
-require 'model/Handler.php';
 
-$dados = Handler::arrayHandler();
+
 
 ?> 
 <!DOCTYPE html>
@@ -23,43 +22,12 @@ $dados = Handler::arrayHandler();
             <div class="panel-heading">Sucesso</div>
             <div class="panel-body">
                 <div class="container col-md-12">
-                    <form method="POST" action="index.php?modulo=Projeto&acao=manutencao">
+                    <form method="POST" action="index.php?modulo=Projeto&acao=telainicial">
                         <div class="form-group">
                             <label>Seu cadastro foi realizado com sucesso! </label>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Segue abaixo as informações: </label>
-                            <p>Nome:
-                            <?= $dados['nome']?>
-                            </p>
-                            <p>Sobrenome:
-                            <?= $dados['sobrenome']?>
-                            </p>
-                            <p>Status:
-                            <?= $dados['status']?>
-                            </p>
-                            <p>Data de nascimento:
-                            <?= $dados['nasc']?>
-                            </p>
-                            <p>Sexo:
-                            <?= $dados['sexo']?>
-                            </p>
-                            <p>Telefone:
-                            <?= $dados['tel']?>
-                            </p>
-                            <p>Celular:
-                            <?= $dados['cel']?>
-                            </p>
-                            <p>E-mail:
-                            <?= $dados['email']?>
-                            </p>
-
-                        </div>
-
-
+                        </div>                       
                         <div class="form-group col-col-md-offset-4">
-                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_back">Ir para a manutenção!</button>
+                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_back">Ir para a Loja!</button>
                         </div>
                     </form>
                 </div>
