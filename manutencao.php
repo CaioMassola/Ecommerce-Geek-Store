@@ -1,7 +1,14 @@
 <?php
 session_start();
+include_once("banco.php");
+
+$ra = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+$result_usuario = "SELECT * FROM cadastro WHERE id = '$ra'";
+$resultado_usuario = mysqli_query($mysqli, $result_usuario);
+$row_usuario = mysqli_fetch_assoc($resultado_usuario);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,86 +111,66 @@ session_start();
             <div class="panel-heading">Cadastro</div>
             <div class="panel-body">
                 <div class="container col-md-12">
-                    <form method="post" name="cadastro" action="index.php?modulo=Projeto&acao=respcadastro" id="formCadastro">
+                    <form method="post" name="cadastro" action="editar.php" id="formCadastro">
+
+                    <div class="form-group">
+                            <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $row_usuario['id']; ?>">
+                    </div>
+
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control" name="nome" id="nome">
+                            <input type="text" class="form-control" name="nome" id="nome" value="<?php echo $row_usuario['nome']; ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Sobrenome</label>
-                            <input type="text" class="form-control" name="sobrenome" id="sobrenome">
+                            <input type="text" class="form-control" name="sobrenome" id="sobrenome" value="Masculino" value="<?php echo $row_usuario['sobrenome']; ?>">
                         </div>
 
-                        <div class="form-check">
-                            <label>Informe seu Estado Civil</label><br>
-                            <input class="form-check-input" type="radio" name="status" id="casado" value="Casado" checked>
-                            <label class="form-check-label" for="casado">
-                                -----Casado
-                            </label>
+                        <div class="form-group">
+                            <label>Status Civil</label>
+                            <input type="text" class="form-control" name="sts" id="status" list="stslist" value="<?php echo $row_usuario['sts']; ?>">
+                            <datalist id="stslist">
+                            <option value="Solteiro"></option>
+                            <option value="Casado"></option>
+                            <option value="Viúvo"></option>
+                            <option value="Divorciado"></option>
+                           
                         </div>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="solteiro" value="solteiro">
-                            <label class="form-check-label" for="solteiro">
-                                -----Solteiro
-                            </label>
-                        </div>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="viuvo" value="Viuvo">
-                            <label class="form-check-label" for="viuvo">
-                                -----Viúvo
-                            </label>
-                        </div>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="divo" value="Divo">
-                            <label class="form-check-label" for="divo">
-                                -----Divorsiado
-                            </label>
-                        </div>
-                        <br>
 
                         <div class="form-group">
                             <label>Data Nascimento</label>
-                            <input type="date" class="form-control" name="nasc" id="nasc">
+                            <input type="date" class="form-control" name="nasc" id="nasc" value="<?php echo $row_usuario['nasc']; ?>">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Sexo</label>
+                            <input type="text" class="form-control" name="sexo" id="sexo" list="sexolist" value="<?php echo $row_usuario['sexo']; ?>">
+                            <datalist id="sexolist">
+                            <option value="Masculino"></option>
+                            <option value="Feminino"></option>
+                           
                         </div>
 
-
-                        <div class="form-check">
-                            <label>Informe seu Sexo</label><br>
-                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" checked>
-                            <label class="form-check-label" for="masculino">
-                                -----Masculino
-                            </label>
-                        </div>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="Feminino">
-                            <label class="form-check-label" for="feminino">
-                                -----Feminino
-                            </label>
-                        </div>
                         <br>
                         <div class="form-group">
                             <label>Telefone Residencial</label>
-                            <input type="number" class="form-control" name="tel" id="tel">
+                            <input type="number" class="form-control" name="tel" id="tel" value="<?php echo $row_usuario['tel']; ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Celular</label>
-                            <input type="number" class="form-control" name="cel" id="cel">
+                            <input type="number" class="form-control" name="cel" id="cel" value="<?php echo $row_usuario['cel']; ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" name="email" id="email">
+                            <input type="email" class="form-control" name="email" id="email" value="<?php echo $row_usuario['email']; ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" class="form-control" name="senha" id="senha">
+                            <input type="password" class="form-control" name="senha" id="senha" value="<?php echo $row_usuario['senha']; ?>">
                         </div>
 
                         <div class="form-group">
@@ -192,12 +179,12 @@ session_start();
                         </div>
 
                         <div class="form-group col-md-4 col-md-offset-4">
-                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_save">Cadastrar</button>
+                            <button type="submit" class="btn btn-success btn-lg btn-block" id="btn_save">Salvar</button>
                         </div>
                     </form>
-                    <a href="index.php?modulo=Projeto&acao=login">
-                        <div class="form-group col-col-md-offset-4">
-                            <button type="submit" class="btn btn-default btn-lg btn-block" id="btn_senha">Já sou cadastrado</button>
+                    <a href="index.php?modulo=Projeto&acao=telaInicial">
+                        <div class="form-group col-md-4 col-md-offset-4">
+                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_senha">Cancelar</button>
                         </div>
                     </a>
                 </div>

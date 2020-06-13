@@ -72,7 +72,13 @@ session_start();
                         required: true,
                         // minlength: 11,
                         // maxlength: 11
-                    }
+                    },
+
+                    id: {
+                        required: true,
+                        // minlength: 11,
+                        // maxlength: 11
+                    },
 
                 },
                 messages: {
@@ -84,7 +90,8 @@ session_start();
                     senha2: "As senhas não se correspondem!",
                     cel: "Informe o celular!",
                     tel: "Informe o telefone!",
-                    civil: "Informe o estado Civil!"
+                    civil: "Informe o estado Civil!",
+                    id: "Informe O ID!",
 
                 },
 
@@ -105,6 +112,11 @@ session_start();
             <div class="panel-body">
                 <div class="container col-md-12">
                     <form method="post" name="cadastro" action="index.php?modulo=Projeto&acao=respcadastro" id="formCadastro">
+
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="number" class="form-control" name="id" id="id">
+                        </div>
                         <div class="form-group">
                             <label>Nome</label>
                             <input type="text" class="form-control" name="nome" id="nome">
@@ -117,28 +129,28 @@ session_start();
 
                         <div class="form-check">
                             <label>Informe seu Estado Civil</label><br>
-                            <input class="form-check-input" type="radio" name="status" id="casado" value="Casado" checked>
+                            <input class="form-check-input" type="radio" name="sts" id="casado" value="Casado" >
                             <label class="form-check-label" for="casado">
                                 -----Casado
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="solteiro" value="solteiro">
+                            <input class="form-check-input" type="radio" name="sts" id="solteiro" value="solteiro">
                             <label class="form-check-label" for="solteiro">
                                 -----Solteiro
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="viuvo" value="Viuvo">
+                            <input class="form-check-input" type="radio" name="sts" id="viuvo" value="Viuvo">
                             <label class="form-check-label" for="viuvo">
                                 -----Viúvo
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="divo" value="Divo">
+                            <input class="form-check-input" type="radio" name="sts" id="divo" value="Divo">
                             <label class="form-check-label" for="divo">
                                 -----Divorsiado
                             </label>
@@ -153,7 +165,7 @@ session_start();
 
                         <div class="form-check">
                             <label>Informe seu Sexo</label><br>
-                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" checked>
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino">
                             <label class="form-check-label" for="masculino">
                                 -----Masculino
                             </label>

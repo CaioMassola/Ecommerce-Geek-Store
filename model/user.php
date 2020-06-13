@@ -38,6 +38,11 @@ class Projeto {
 		return $data;
 	}
 
+	public function visualizarDados() {
+		$data = $this->dados;
+		return $data;
+    }
+
 	public function camisas() {
 		$data = $this->dados;
 		return $data;

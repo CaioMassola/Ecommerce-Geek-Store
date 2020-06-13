@@ -2,32 +2,7 @@
  <?php
 session_start();
 
-$idd = $_POST['id'];
-$nomee = $_POST['nome'];
-$sobrenomee = $_POST['sobrenome'];
-$stss = $_POST['sts'];
-$nascc = $_POST['nasc'];
-$sexoo = $_POST['sexo'];
-$tell = $_POST['tel'];
-$cell = $_POST['cel'];
-$emaill = $_POST['email'];
-$senhaa = $_POST['senha'];
 
-$strcon =  mysqli_connect('localhost','root','', 'cadastro') or die ('Erro ao conectar');
-$dadosInsert ="INSERT into cadastro(id,nome,sobrenome,sts,nasc,sexo,tel,cel,email,senha) values";
-// $dadosInsert ="INSERT into cadastro(id) values";
-$dadosInsert .=  "($idd,'$nomee','$sobrenomee','$stss','$nascc','$sexoo',$tell,$cell,'$emaill','$senhaa')";
-// $dadosInsert .=  "($idd)";
-// mysqli_query($strcon, $dadosInsert) or die ('Erro ao conectar2');
-// mysqli_close($strcon);
-
-if ($strcon->query($dadosInsert) === TRUE) {
-    echo "";
-  } else {
-    echo "Error: " . $dadosInsert . "<br>" . $strcon->error;
-  }
-
-  $strcon->close();
 
 ?> 
 <!DOCTYPE html>
@@ -38,7 +13,7 @@ if ($strcon->query($dadosInsert) === TRUE) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="login.css">
-    <title>Cadastrado</title>
+    <title>Editado</title>
 </head>
 
 <body>
@@ -49,7 +24,7 @@ if ($strcon->query($dadosInsert) === TRUE) {
                 <div class="container col-md-12">
                     <form method="POST" action="index.php?modulo=Projeto&acao=telainicial">
                         <div class="form-group">
-                            <label>Seu cadastro foi realizado com sucesso! </label>
+                            <label>Seu cadastro foi editado com sucesso! </label>
                         </div>                       
                         <div class="form-group col-col-md-offset-4">
                             <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_back">Ir para a Loja!</button>
