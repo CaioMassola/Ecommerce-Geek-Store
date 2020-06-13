@@ -2,7 +2,32 @@
  <?php
 session_start();
 
+$idd = $_POST['id'];
+$nomee = $_POST['nome'];
+$sobrenomee = $_POST['sobrenome'];
+$stss = $_POST['sts'];
+$nascc = $_POST['nasc'];
+$sexoo = $_POST['sexo'];
+$tell = $_POST['tel'];
+$cell = $_POST['cel'];
+$emaill = $_POST['email'];
+$senhaa = $_POST['senha'];
 
+$strcon =  mysqli_connect('localhost','root','', 'cadastro') or die ('Erro ao conectar');
+$dadosInsert ="INSERT into cadastro(id,nome,sobrenome,sts,nasc,sexo,tel,cel,email,senha) values";
+// $dadosInsert ="INSERT into cadastro(id) values";
+$dadosInsert .=  "($idd,'$nomee','$sobrenomee','$stss','$nascc','$sexoo',$tell,$cell,'$emaill','$senhaa')";
+// $dadosInsert .=  "($idd)";
+// mysqli_query($strcon, $dadosInsert) or die ('Erro ao conectar2');
+// mysqli_close($strcon);
+
+if ($strcon->query($dadosInsert) === TRUE) {
+    echo "";
+  } else {
+    echo "Error: " . $dadosInsert . "<br>" . $strcon->error;
+  }
+
+  $strcon->close();
 
 ?> 
 <!DOCTYPE html>
