@@ -59,7 +59,7 @@ session_start();
             <div class="panel-heading">Login</div>
             <div class="panel-body">
                 <div class="container col-md-12">
-                    <form name="login" action="index.php?modulo=Projeto&acao=telaInicial" method="post" id="formLogin">
+                    <form name="login" action="valida.php" method="post" id="formLogin">
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" class="form-control" name="email" id="email">
