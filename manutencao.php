@@ -124,7 +124,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 
                         <div class="form-group">
                             <label>Sobrenome</label>
-                            <input type="text" class="form-control" name="sobrenome" id="sobrenome" value="Masculino" value="<?php echo $row_usuario['sobrenome']; ?>">
+                            <input type="text" class="form-control" name="sobrenome" id="sobrenome" value="<?php echo $row_usuario['sobrenome']; ?>">
                         </div>
 
                         <div class="form-group">

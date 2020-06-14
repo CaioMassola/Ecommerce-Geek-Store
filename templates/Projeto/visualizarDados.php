@@ -2,7 +2,6 @@
 session_start();
 include("banco.php");
 
-
 $consulta = "select * from cadastro";
 $con = $mysqli->query($consulta) or die($mysli->error);
 
@@ -51,6 +50,18 @@ a:link {
     </style>
 
 <body>
+<?php
+
+
+if(isset($_SESSION["usercod"])){
+    echo "<center> Você está logado! <a href='logout.php'>Sair</a></center>";
+}
+
+else {
+    header("Location: index.php?modulo=Projeto&acao=login");
+    exit;
+}
+?>
         <div class="col-md-8 col-md-offset-2">
           <table class="table">
             <thead class="thead-dark">

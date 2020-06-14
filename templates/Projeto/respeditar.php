@@ -17,6 +17,18 @@ session_start();
 </head>
 
 <body>
+<?php
+
+
+if(isset($_SESSION["usercod"])){
+    echo "<center> Você está logado! <a href='logout.php'>Sair</a></center>";
+}
+
+else {
+    header("Location: index.php?modulo=Projeto&acao=login");
+    exit;
+}
+?>
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-success">
             <div class="panel-heading">Sucesso</div>

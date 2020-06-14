@@ -26,7 +26,7 @@ $resultado_usuario = mysqli_query($mysqli, $result_usuario);
 // }
 // 
 if (mysqli_query($mysqli, $result_usuario)) {
-	header("Location: index.php?modulo=Projeto&acao=visualizarDados");
+	header("Location: index.php?modulo=Projeto&acao=telaInicial");
   } else {
 	echo "Error updating record: " . mysqli_error($mysqli);
   }
