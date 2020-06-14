@@ -18,15 +18,8 @@ $senhaa = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 $result_usuario = "UPDATE cadastro SET nome='$nomee', sobrenome='$sobrenomee', sts='$status', nasc='$nascc', sexo='$sexoo', tel='$tel' , cel='$cel', email='$emaill', senha='$senhaa'  WHERE id='$idd'";
 $resultado_usuario = mysqli_query($mysqli, $result_usuario);
 
-
-// if(mysqli_affected_rows($mysqli)){
-// 	header("Location: index.php?modulo=Atividade&acao=visualizarAlunos");
-// }else{
-// 	echo "Erro ao Alterar";
-// }
-// 
 if (mysqli_query($mysqli, $result_usuario)) {
-	header("Location: index.php?modulo=Projeto&acao=telaInicial");
+	header("Location: index.php?modulo=Projeto&acao=visualizarDados");
   } else {
 	echo "Error updating record: " . mysqli_error($mysqli);
   }

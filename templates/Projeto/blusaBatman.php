@@ -36,6 +36,11 @@
         </button>
         </a>
 
+        <a href="index.php?modulo=Projeto&acao=manuProd"><button type="button" class="btn btn-link">
+            <h4 class="px-1">Manutenção de Produtos</h4>
+        </button>
+        </a>
+
         <!-- <a href="logout.php"><button type="button" class="btn btn-link">
             <h4 class="px-1">Sair</h4>
         </button>
