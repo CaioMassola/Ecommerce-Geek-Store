@@ -42,6 +42,21 @@ class Projeto {
 		$data = $this->dados;
 		return $data;
 	}
+
+	public function manuProd() {
+		$data = $this->dados;
+		return $data;
+	}
+
+	public function respmanuprod() {
+		$data = $this->dados;
+		return $data;
+	}
+
+	public function visualizarProdutos() {
+		$data = $this->dados;
+		return $data;
+	}
 	
 	public function procurar() {
 		$data = $this->dados;
