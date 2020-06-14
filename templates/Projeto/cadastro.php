@@ -79,6 +79,7 @@ session_start();
                         // minlength: 11,
                         // maxlength: 11
                     },
+                    
 
                 },
                 messages: {
@@ -111,8 +112,7 @@ session_start();
             <div class="panel-heading">Cadastro</div>
             <div class="panel-body">
                 <div class="container col-md-12">
-                    <form method="post" name="cadastro" action="index.php?modulo=Projeto&acao=respcadastro" id="formCadastro">
-
+                    <form method="post" name="cadastro" action="validacadastro.php" id="formCadastro">
                         <div class="form-group">
                             <label>RG</label>
                             <input type="number" class="form-control" name="id" id="id">
@@ -136,7 +136,7 @@ session_start();
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sts" id="solteiro" value="solteiro">
+                            <input class="form-check-input" type="radio" name="sts" id="solteiro" value="solteiro" checked>
                             <label class="form-check-label" for="solteiro">
                                 -----Solteiro
                             </label>
@@ -165,7 +165,7 @@ session_start();
 
                         <div class="form-check">
                             <label>Informe seu Sexo</label><br>
-                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" checked>
                             <label class="form-check-label" for="masculino">
                                 -----Masculino
                             </label>
@@ -191,6 +191,7 @@ session_start();
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" class="form-control" name="email" id="email">
+                            <div id='resposta'></div>
                         </div>
 
                         <div class="form-group">
@@ -204,7 +205,7 @@ session_start();
                         </div>
 
                         <div class="form-group col-md-4 col-md-offset-4">
-                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_save">Cadastrar</button>
+                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_save" name="btn-cadastrar">Cadastrar</button>
                         </div>
                     </form>
                     <a href="index.php?modulo=Projeto&acao=login">
