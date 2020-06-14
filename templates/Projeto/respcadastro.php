@@ -42,17 +42,18 @@ if ($strcon->query($dadosInsert) === TRUE) {
 </head>
 
 <body>
+
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-success">
             <div class="panel-heading">Sucesso</div>
             <div class="panel-body">
                 <div class="container col-md-12">
-                    <form method="POST" action="index.php?modulo=Projeto&acao=telainicial">
+                    <form method="POST" action="index.php?modulo=Projeto&acao=login">
                         <div class="form-group">
                             <label>Seu cadastro foi realizado com sucesso! </label>
                         </div>                       
                         <div class="form-group col-col-md-offset-4">
-                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_back">Ir para a Loja!</button>
+                            <button type="submit" class="btn btn-dark btn-lg btn-block" id="btn_back">Ir para a Login!</button>
                         </div>
                     </form>
                 </div>

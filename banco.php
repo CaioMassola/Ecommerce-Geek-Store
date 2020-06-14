@@ -7,6 +7,7 @@ $usuario = "root";
 $senha = "";
 $bd = "cadastro";
 
+
 $mysqli = mysqli_connect($host, $usuario,$senha, $bd);
 
 if($mysqli-> connect_errno)
