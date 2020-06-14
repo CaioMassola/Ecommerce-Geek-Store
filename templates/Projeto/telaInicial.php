@@ -1,11 +1,7 @@
 <?php
+
+session_start();
 include("banco.php");
-
-if(isset($_SESSION["usercod"])){
-    echo "<left> Você está logado! <a href='logout.php'>Sair</a></left>";
-}
-
-
 ?>
 
 <html>
@@ -45,15 +41,27 @@ if(isset($_SESSION["usercod"])){
         </button>
         </a>
 
-        <a href="logout.php"><button type="button" class="btn btn-link">
+        <!-- <a href="logout.php"><button type="button" class="btn btn-link">
             <h4 class="px-1">Sair</h4>
         </button>
-        </a>
+        </a> -->
 
     </div>
 </header>
 
 <body>
+<?php
+
+
+if(isset($_SESSION["usercod"])){
+    echo "<center> Você está logado! <a href='logout.php'>Sair</a></center>";
+}
+
+else {
+    header("Location: index.php?modulo=Projeto&acao=login");
+    exit;
+}
+?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
         <ul class="navbar-nav align-items-center" id="navbar">
             <li class="nav-item">

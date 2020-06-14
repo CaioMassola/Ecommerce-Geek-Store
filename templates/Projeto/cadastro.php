@@ -114,7 +114,7 @@ session_start();
                     <form method="post" name="cadastro" action="index.php?modulo=Projeto&acao=respcadastro" id="formCadastro">
 
                         <div class="form-group">
-                            <label>ID</label>
+                            <label>RG</label>
                             <input type="number" class="form-control" name="id" id="id">
                         </div>
                         <div class="form-group">

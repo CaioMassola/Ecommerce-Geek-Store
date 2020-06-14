@@ -37,14 +37,26 @@ session_start();
         </button>
         </a>
 
-        <a href="logout.php"><button type="button" class="btn btn-link">
+        <!-- <a href="logout.php"><button type="button" class="btn btn-link">
             <h4 class="px-1">Sair</h4>
         </button>
-        </a>
+        </a> -->
 
     </div>
 </header>
+<body>
+<?php
 
+
+if(isset($_SESSION["usercod"])){
+    echo "<center> Você está logado! <a href='logout.php'>Sair</a></center>";
+}
+
+else {
+    header("Location: index.php?modulo=Projeto&acao=login");
+    exit;
+}
+?>
 <div class="col-md-3 col-md-offset-0">
     <div class="panel panel-default">
         <div class="panel-heading">Desenvolvedor</div>
@@ -144,4 +156,5 @@ session_start();
         </div>
     </div>
 </div>
+</body>
 </html>
