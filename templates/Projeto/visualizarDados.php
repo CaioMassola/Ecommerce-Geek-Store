@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("banco.php");
+ 
 
 $consulta = "select * from cadastro";
 $con = $mysqli->query($consulta) or die($mysli->error);
@@ -66,7 +67,7 @@ else {
           <table class="table">
             <thead class="thead-dark">
               <tr>
-                <th scope="col">ID</th>
+                <th scope="col">RG</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Sobrenome</th>
                 <th scope="col">Status Civil</th>

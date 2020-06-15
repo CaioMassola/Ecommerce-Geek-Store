@@ -30,7 +30,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
         }
     </style>
 
-    <script>
+<script>
         $(document).ready(function() {
             jQuery.validator.setDefaults({
                 debug: true,
@@ -71,15 +71,22 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 
                     tel: {
                         required: true,
-                        // minlength: 10,
-                        // maxlength: 10
+                        minlength: 8,
+                        maxlength: 8
                     },
 
                     cel: {
                         required: true,
-                        // minlength: 11,
-                        // maxlength: 11
-                    }
+                        minlength: 9,
+                        maxlength: 9
+                    },
+
+                    id: {
+                        required: true,
+                         minlength: 9,
+                         maxlength: 9
+                    },
+                    
 
                 },
                 messages: {
@@ -89,9 +96,10 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
                     nasc: "Informe a data de nascimento!",
                     senha: "Informe uma senha válida!",
                     senha2: "As senhas não se correspondem!",
-                    cel: "Informe o celular!",
-                    tel: "Informe o telefone!",
-                    civil: "Informe o estado Civil!"
+                    cel: "Informe o celular! Com 9 algarismos sem o DDD",
+                    tel: "Informe o telefone! Com 8 algarismos sem o DDD",
+                    civil: "Informe o estado Civil!",
+                    id: "Informe o RG! Com 9 algarismos",
 
                 },
 

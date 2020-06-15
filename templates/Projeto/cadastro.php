@@ -64,20 +64,20 @@ session_start();
 
                     tel: {
                         required: true,
-                        // minlength: 10,
-                        // maxlength: 10
+                        minlength: 8,
+                        maxlength: 8
                     },
 
                     cel: {
                         required: true,
-                        // minlength: 11,
-                        // maxlength: 11
+                        minlength: 9,
+                        maxlength: 9
                     },
 
                     id: {
                         required: true,
-                        // minlength: 11,
-                        // maxlength: 11
+                         minlength: 9,
+                         maxlength: 9
                     },
                     
 
@@ -89,10 +89,10 @@ session_start();
                     nasc: "Informe a data de nascimento!",
                     senha: "Informe uma senha válida!",
                     senha2: "As senhas não se correspondem!",
-                    cel: "Informe o celular!",
-                    tel: "Informe o telefone!",
+                    cel: "Informe o celular! Com 9 algarismos sem o DDD",
+                    tel: "Informe o telefone! Com 8 algarismos sem o DDD",
                     civil: "Informe o estado Civil!",
-                    id: "Informe O ID!",
+                    id: "Informe o RG! Com 9 algarismos",
 
                 },
 
