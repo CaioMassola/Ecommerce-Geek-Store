@@ -44,6 +44,8 @@ session_start();
 
                     idProd: {
                         required: true,
+                        minlength: 1,
+                         maxlength: 8
                     },
                 
                     
@@ -53,7 +55,7 @@ session_start();
                     nomeProd: "Informe o nome do produto!",
                     tipoProd: "Informe o tipo do produto!",
                     quantProd: "Informe a quantidade do produto!",
-                    idProd: "Informe o ID para o produto!",
+                    idProd: "Informe o ID para o produto!  Máximo 8 algarismos",
                     
 
                 },
