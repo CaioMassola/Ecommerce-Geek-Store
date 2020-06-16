@@ -2,9 +2,9 @@
 session_start();
 include("banco.php");
 
-$emaill = $_SESSION['salvar'];
 
-$consulta = "select * from cadastro where email='$emaill'";
+
+$consulta = "select * from cadastro";
 $con = $mysqli->query($consulta) or die($mysli->error);
 
 
@@ -77,15 +77,10 @@ else {
                 <th scope="col">Telefone</th>
                 <th scope="col">Celular</th>
                 <th scope="col">Email</th>
-                <th scope="col">Senha</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
               </tr>
             </thead>
             <?php
             while ($dado = $con->fetch_array()) {
-
-
             ?>
               <tbody>
                 <tr>
@@ -98,16 +93,6 @@ else {
                   <td><?php echo $dado['tel'];   ?></td>
                   <td><?php echo $dado['cel'];   ?></td>
                   <td><?php echo $dado['email'];   ?></td>
-                  <td><?php echo $dado['senha'];   ?></td>
-                  <td><?php 
-                  echo "<a href='manutencao.php?id=" . $dado['id'] . "'>Editar</a><br>";
-                  ?>
-                  </td>
-                  <td>
-      
-                    <a href="javascript: if(confirm('Tem certeza que deseja deletar o usuário <?php echo $dado['nome']; ?>?'))
-			              location.href='deletar.php?id=<?php echo $dado['id']; ?>';" style="color: red">Deletar</a>
-                  </td>
                 </tr>
               </tbody>
             <?php } ?>
@@ -118,9 +103,9 @@ else {
             </div>
           </a>
 
-          <a href="index.php?modulo=Projeto&acao=verTodos">
+          <a href="index.php?modulo=Projeto&acao=visualizarDados">
             <div class="form-group col-md-4 col-md-offset-4">
-              <button type="submit" class="btn btn-dark btn-lg btn-block" id="sair">Visualizar todos Usuários</button>
+              <button type="submit" class="btn btn-dark btn-lg btn-block" id="sair">Voltar</button>
             </div>
           </a>
         </div>
