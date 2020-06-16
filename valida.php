@@ -29,6 +29,9 @@ mysqli_select_db($conecta, $bd) or print(mysqli_error($conecta));
 
 $email=$_POST["email"];
 $senha = $_POST["senha"];
+$salvar = $email;
+
+$_SESSION['salvar'] = $salvar;
 
 $sql = "SELECT * from cadastro where email='$email' and senha='$senha'";
 

@@ -33,6 +33,11 @@ class Projeto {
 		return $data;
 	}
 
+	public function verTodos() {
+		$data = $this->dados;
+		return $data;
+	}
+
 	public function telaInicial() {
 		$data = $this->dados;
 		return $data;
