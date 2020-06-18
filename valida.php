@@ -32,7 +32,6 @@ $senha = $_POST["senha"];
 $salvar = $email;
 
 $_SESSION['salvar'] = $salvar;
-
 $sql = "SELECT * from cadastro where email='$email' and senha='$senha'";
 
 $result = mysqli_query($conecta, $sql) or die ('Erro ao conectar2');
@@ -47,7 +46,8 @@ if($row>0){
     echo "<center> Você não foi autenticado com sucesso! Aguarde um instante...</center>";
     echo "<script>loginfailed()</script>";}
     mysqli_close($conecta);
-  
+
+
 ?>
 
   </font>

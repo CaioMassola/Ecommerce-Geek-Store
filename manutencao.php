@@ -172,8 +172,8 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
                         </div>
 
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" name="email" id="email" value="<?php echo $row_usuario['email']; ?>">
+                            <!-- <label>Email</label> -->
+                            <input type="hidden" class="form-control" name="email" id="email" value="<?php echo $row_usuario['email']; ?>">
                         </div>
 
                         <div class="form-group">
