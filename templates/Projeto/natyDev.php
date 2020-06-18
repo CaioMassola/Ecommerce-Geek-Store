@@ -19,7 +19,7 @@ session_start();
 </head>
 <header class="flex-wrap">
     <div id="storeNameContainer" class="align-self-start d-inline-flex align-items-center">
-        <a href="index.php?modulo=Projeto&acao=telaInicial"><img id="logo" href="" src="img/logo.png" /></a>
+        <a href="index.php?modulo=Projeto&acao=telaInicial"><img id="logo" href="" src="../img/logo.png" /></a>
 
         <a href="index.php?modulo=Projeto&acao=telaInicial">
             <h1 id="storeName" class="my-0">GEEK store</h1>
@@ -63,24 +63,51 @@ else {
     exit;
 }
 ?>
-<p id="us">Nossa Equipe</p>
-    <p id="desc">Clique sobre a imagem de cada integrante para conhecer melhor nosso time de desenvolvimento!</p>
-    <div class="d-flex justify-content-around flex-wrap">
-        <a id = "product" href = "index.php?modulo=Projeto&acao=natyDev"> <img id="logo" href="" src="img/naty.jfif" />
-            <p id = "name">Natali Rocha</p>
-        </a>
-        <a id = "product" href = "index.php?modulo=Projeto&acao=lucasDev"> <img id="logo" href="" src="img/david.jfif" />
-            <p id = "name">Lucas David</p>
-        </a>
-        <a id = "product" href = "index.php?modulo=Projeto&acao=caioDev"> <img id="logo" href="" src="img/caioimg.jfif" />
-            <p id = "name">Caio Henrique</p>
-        </a>
-        <a id = "product" href = "index.php?modulo=Projeto&acao=mariDev"> <img id="logo" href="" src="img/marii.jfif" />
-            <p id = "name">Marina Pelissari</p>
-        </a>
-        <a id = "product" href = "index.php?modulo=Projeto&acao=mathDev"> <img id="logo" href="" src="img/math.jfif" />
-            <p id = "name">Matheus Perreche</p>
-        </a>
+ <div id="onlyProduct" class="d-inline-flex justify-content-center align-items-center flex-wrap">
+        <img id="logo"  style="height: 50px;"class="rounded" href="" src="img/naty.jfif" />
+        <div id="productDetails" class="d-flex flex-column p-4">
+            <h1>Natali Rocha</h1>
+            <h4 class="pb-4">Estudante e estagiária na IBM Brasil</h4>
+            <ul>
+                <br/>
+                <li>
+                    Profissão: Estudante e estagiária em governança na IBM Brasil.
+                </li>
+                <br/>
+                <li>
+                    Contato: <a
+                        href="https://www.linkedin.com/in/natali-aguiar-659854161/">Linkedin</a> ;
+                </li>
+                <br/>
+                <li>
+                    Instituição de ensino: <a href="https://portal.anhembi.br/">Anhembi Morumbi</a>
+                </li>
+                <br/>
+                <li>
+                    Conhecimentos técnicos: Javascript; Python; Node.js; MySQL; Service Now.
+                </li>
+                <br/>
+                <li>
+                    Cursos Realizados: Python (4Linux); Interfaces Web (USP); Desenvolvimento Fullstack (Digital House).
+                </li>
+                <br/>
+                <li>
+                    Habilidades: Desenvolvimento e governança.
+                </li>
+                <br/>
+                <li>
+                    Interesses: Viajar.
+                </li>
+                <br/>
+                <li>
+                    Hobbies: Leitura ; Ouvir música ; Cinema.
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div id="buttonsContainer" class="d-inline-flex justify-content-center align-items-center flex-wrap">
+           
+        </div>
     </div>
 
 </body>
