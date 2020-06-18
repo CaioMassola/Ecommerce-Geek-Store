@@ -33,6 +33,26 @@ class Projeto {
 		return $data;
 	}
 
+	public function caioDev() {
+		$data = $this->dados;
+		return $data;
+	}
+	public function mariDev() {
+		$data = $this->dados;
+		return $data;
+	}
+	public function natyDev() {
+		$data = $this->dados;
+		return $data;
+	}
+	public function lucasDev() {
+		$data = $this->dados;
+		return $data;
+	}
+	public function mathDev() {
+		$data = $this->dados;
+		return $data;
+	}
 	public function verTodos() {
 		$data = $this->dados;
 		return $data;

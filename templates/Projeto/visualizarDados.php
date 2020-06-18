@@ -1,8 +1,8 @@
 <?php
 session_start();
 include("banco.php");
-
 $emaill = $_SESSION['salvar'];
+
 
 $consulta = "select * from cadastro where email='$emaill'";
 $con = $mysqli->query($consulta) or die($mysli->error);

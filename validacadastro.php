@@ -39,6 +39,7 @@ $cel = $_POST['cel'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
+
 $sql = "SELECT * from cadastro where email='$email' or id='$id'";
 
 $result = mysqli_query($conecta, $sql) or die ('Erro ao conectar2');
